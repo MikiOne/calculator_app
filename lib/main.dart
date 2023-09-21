@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(CalculatorApp());
+  runApp(const CalculatorApp());
 }
 
 class CalculatorApp extends StatelessWidget {
@@ -129,16 +129,16 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Calculator')),
+      appBar: AppBar(title: const Text('Calculator')),
       body: Column(
         children: <Widget>[
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               alignment: Alignment.bottomRight,
               child: Text(
                 _displayText,
-                style: TextStyle(fontSize: 24),
+                style: const TextStyle(fontSize: 24),
               ),
             ),
           ),
@@ -207,13 +207,13 @@ class CalculatorButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: Colors.red,
-        // 设置按钮的背景颜色
-        onPrimary: Colors.white,
         // 设置按钮上文本的颜色
-        textStyle: TextStyle(fontSize: 16),
+        foregroundColor: Colors.white,
+        // 设置按钮的背景颜色
+        backgroundColor: Colors.green,
+        textStyle: const TextStyle(fontSize: 16),
         // 设置按钮上文本的样式
-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         // 设置按钮内边距
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         // 设置按钮的形状
